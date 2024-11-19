@@ -1,0 +1,13 @@
+# System Files
+[Tt]humbs.db
+*.DS_Store
+/.idea
+/.vscode
+.directory
+
+# Project directories
+/_*
+
+# Project Files
+/.htaccess
+
