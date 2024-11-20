@@ -96,7 +96,7 @@ jQuery(function($) {
 ```
 
 _Note: Bootstrap does not define dialog header colors by default, 
-see the example pages styles for how to implement the color classes._
+see the example pages for how to implement the color classes._
 
 
 __Dialog Button text__
