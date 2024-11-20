@@ -29,10 +29,12 @@ A jQuery plugin to implement basic Bootstrap confirmation dialogs.
 
 __Enable the bsConfirm plugin__
 
-The plugin will work with Bootstrap version 3, 4, and 5.
+The plugin is compatible with Bootstrap versions 3, 4, and 5.
+
+To enable confirmation dialogs on anchors and form submit buttons using the `data-confirm="..."` attribute:
 ```js
 jQuery(function($) {
-  $('[data-confirm]').bsConfirm();
+  $('[data-confirm]').bsConfirm({});
 });
 ```
 
@@ -50,29 +52,35 @@ jQuery(function($) {
 
 ## Usage
 
-
-This will enable a confirmation dialog on any anchors and submit buttons with the `data-confirm="..."` attribute.
-
-__Basic Confirmation dialog__
+Links:
 ```html
-<a href="bs3confirm.html" data-confirm="Are you sure you want to submit this action?">Default Confirm</a>
+<a href="index.html" data-confirm="Are you sure you want to submit this action?">Default Confirm</a>
 ```
-The `data-confirm="..."` attribute can contain html markup for example `<br>` or `<strong>...</strong>`.
+
+Forms:
+```html
+<form method="get">
+  ...
+  <button type="submit" class="btn btn-primary" data-confirm="Are you sure you want to submit this form?">Submit</button>
+</form>
+```
+
+The `data-confirm="..."` attribute can contain basic html markup for example `<br>` or `<strong>...</strong>`.
 
 __Dialog Title__
 
-To set a custom title for the dialog add a `title="..."` attribute to the element.
+The elements `title` attribute will be used to set the dialog's title if it exists:
 ```html
-<a href="bs3confirm.html" title="Confirmation Dialog Title" data-confirm="Are you sure you want to submit this action?">Default Confirm</a>
+<a href="index.html" title="Confirmation Dialog Title" data-confirm="Are you sure you want to submit this action?">Default Confirm</a>
 ```
 
-__Dialog colors__
+__Dialog Header Colors__
 
-The plugin will use the bootstrap colors if the confirmation trigger element is using them.
+The plugin will use the bootstrap color from the trigger element if it exists or else the dialog will use default styling.
 
-If the confirmation element uses `class="btn btn-danger"` then the dialogs header and submit buttons will be set to that color.
+If the trigger element uses `class="btn btn-danger"` the dialogs header and submit buttons will be set to use the `danger` color.
 
-The CSS classes used for the header can be changed from their defaults when initiating the plugin:
+The CSS classes used for the dialog headers can be changed from their defaults when initiating the plugin:
 ```js
 jQuery(function($) {
   $('[data-confirm]').bsConfirm({
@@ -87,14 +95,18 @@ jQuery(function($) {
 });
 ```
 
+_Note: Bootstrap does not define dialog header colors by default, 
+see the example pages styles for how to implement the color classes._
+
+
 __Dialog Button text__
 
-To change the dialog button text you can add the following attributes:
+To change the dialog button text you can add the following attributes to the element:
 
 - `data-confirm-btn="Confirm"`
 - `data-cancel-btn="Cancel"`
 
-To change the button text in the plugin init:
+To change the Default button text for all elements set them on plugin init:
 ```js
 jQuery(function($) {
   $('[data-confirm]').bsConfirm({
