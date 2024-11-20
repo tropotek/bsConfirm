@@ -1,16 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Bootstrap Confirmation Dialog</title>
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Bootstrap 5 Confirmation Example </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    /* Show it's not fixed to the top */
+    body {
+      min-height: 75rem;
+    }
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .modal-header-success {
+      color:#fff;
+      border-bottom:1px solid #eee;
+      background-color: #5cb85c;
+    }
+    .modal-header-warning {
+      color:#fff;
+      border-bottom:1px solid #eee;
+      background-color: #f0ad4e;
+    }
+    .modal-header-danger {
+      color:#fff;
+      border-bottom:1px solid #eee;
+      background-color: #d9534f;
+    }
+    .modal-header-info {
+      color:#fff;
+      border-bottom:1px solid #eee;
+      background-color: #5bc0de;
+    }
+    .modal-header-primary {
+      color:#fff;
+      border-bottom:1px solid #eee;
+      background-color: #428bca;
+    }
+  </style>
+
 </head>
 <body>
 
-  <h2>Bootstrap Confirmation Dialog</h2>
-  <ul>
-    <li><a href="bs3confirm.html">bsConfirm Bootstrap 3/4</a></li>
-    <li><a href="bs5confirm.html">bsConfirm Bootstrap 5</a></li>
-  </ul>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">BsConfirm</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bs3confirm.html">Bootstrap 3/4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/tropotek/bsConfirm" target="_blank">Readme</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="bg-body-tertiary p-5 rounded">
+    <h1>Bootstrap 5 Confirmation Example</h1>
+    <p class="lead">
+      Simpler way to implement confirmation dialogs in Bootstrap
+    </p>
+  </div>
+
+  <p>&nbsp;</p>
+
+  <div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="links-tab" data-bs-toggle="tab" data-bs-target="#links" type="button" role="tab" aria-controls="links-tab-pane" aria-selected="true">Links</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#form" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Form</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="links" role="tabpanel" aria-labelledby="links-tab" tabindex="0">
+        <p>&nbsp;</p>
+        <p>
+          <a href="index.html" title="Primary Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-primary">Primary Confirm</a>
+          <a href="index.html" title="Success Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-success">Success Confirm</a>
+          <a href="index.html" title="Warning Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-warning">Warning Confirm</a>
+          <a href="index.html" title="Info Confirm"    data-confirm="Are you sure you want to submit this action?" class="btn btn-info">Info Confirm</a>
+          <a href="index.html" title="Danger Confirm"  data-confirm="Are you sure you want to submit this action?" class="btn btn-danger">Danger Confirm</a>
+          <a href="index.html" title="Default Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-light">Default Confirm</a>
+          <a href="index.html" title="Outline Warning Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-outline-warning">Outline Warning Confirm</a>
+        </p>
+        <p>&nbsp;</p>
+      </div>
+
+      <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab" tabindex="0">
+        <p>&nbsp;</p>
+        <form method="get">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" name="input1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="text" name="input2" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn btn-primary" data-confirm="Are you sure you want to submit this form?">Submit</button>
+        </form>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </div>
+
+
+
+</main>
+
+
+<script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="../js/jquery.bsConfirm.js"></script>
+
+<script>
+  jQuery(function($) {
+
+    $('[data-confirm]').bsConfirm();
+
+  });
+</script>
 
 </body>
 </html>

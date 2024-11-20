@@ -67,9 +67,10 @@
 
     // plugin settings
     const defaults = {
-      template: templateList.template5,
-      confirmBtn: 'Confirm',
-      cancelBtn:  'Cancel',
+      template:    '',
+      dataConfirm: 'confirm',
+      confirmBtn:  'Confirm',
+      cancelBtn:   'Cancel',
       headerColorMap: {
         primary: 'modal-header-primary',
         success: 'modal-header-success',
@@ -95,8 +96,8 @@
         return;
       }
 
-      // select boostrap modal template
-      if (parseInt($.fn.tooltip.Constructor.VERSION.charAt(0)) < 5) {
+      // select boostrap modal template if not defined by user
+      if (plugin.settings.template === '' && parseInt($.fn.tooltip.Constructor.VERSION.charAt(0)) < 5) {
           plugin.settings.template = templateList.template4;
       } else {
           plugin.settings.template = templateList.template5;
@@ -113,7 +114,7 @@
         if ((el.attr('title') ?? '') !== '') {
           $('.modal-title', modal).text(el.attr('title'));
         }
-        $('.modal-body', modal).html(el.data('confirm'));
+        $('.modal-body', modal).html(el.data(plugin.settings.dataConfirm));
         $('.btn-cancel', modal).text(plugin.settings.cancelBtn);
         $('.btn-confirm', modal).text(plugin.settings.confirmBtn);
 
@@ -138,9 +139,6 @@
              document.location = el.attr('href');
           } else if (el.is('[type=submit]')) {
             el.closest('form').submit();
-            // todo mm: this was used in the past, but will not work for forms that do not reload the page.
-            // el.off('click');
-            // el.trigger('click');
           }
           return true;
         });

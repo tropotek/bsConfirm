@@ -73,8 +73,8 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="bs3confirm.html">Bootstrap 3/4</a></li>
-        <li><a href="bs5confirm.html">Bootstrap 5</a></li>
+        <li><a href="index.html">Bootstrap 5</a></li>
+        <li><a href="https://github.com/tropotek/bsConfirm" target="_blank">Readme</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -93,75 +93,13 @@
     <div>
       <!-- Nav tabs -->
       <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#usage" aria-controls="usage" role="tab" data-toggle="tab">Usage</a></li>
-        <li role="presentation"><a href="#links" aria-controls="links" role="tab" data-toggle="tab">Links</a></li>
+        <li role="presentation" class="active"><a href="#links" aria-controls="links" role="tab" data-toggle="tab">Links</a></li>
         <li role="presentation"><a href="#form" aria-controls="profile" role="tab" data-toggle="tab">Form</a></li>
       </ul>
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="usage">
-
-
-          <p>&nbsp;</p>
-          <p><strong>Enable the bsConfirm plugin</strong></p>
-          <p>The plugin will work with Bootstrap version 3, 4, and 5.</p>
-          <pre>
-jQuery(function($) {
-  $('[data-confirm]').bsConfirm();
-});</pre>
-          <p>This will enable a confirmation dialog on any anchors and submit buttons with the <code>data-confirm="..."</code> attribute.</p>
-          <p>&nbsp;</p>
-
-          <p><strong>Basic Confirmation dialog</strong></p>
-          <pre>
-&lt;a href="bs3confirm.html" data-confirm="Are you sure you want to submit this action?"&gt;Default Confirm&lt;/a&gt;</pre>
-          <p>The <code>data-confirm="..."</code> attribute can contain html markup for example <code>&lt;br&gt;</code> or <code>&lt;strong&gt;...&lt;/strong&gt;</code>.</p>
-          <p>&nbsp;</p>
-
-          <p><strong>Dialog Title</strong></p>
-          <p>To set a custom title for the dialog add a <code>title="..."</code> attribute to the element.</p>
-          <pre>
-&lt;a href="bs3confirm.html" title="Confirmation Dialog Title" data-confirm="Are you sure you want to submit this action?"&gt;Default Confirm&lt;/a&gt;</pre>
-          <p>&nbsp;</p>
-
-          <p><strong>Dialog colors</strong></p>
-          <p>The plugin will use the bootstrap colors if the confirm trigger element is using them.</p>
-          <p>If the confirm element uses <code>class="btn btn-danger"</code> then the dialogs header and submit buttons will be set to that color</p>
-          <p>The CSS classes used for the header can be changed from their defaults when initiating the plugin:</p>
-          <pre>
-jQuery(function($) {
-  $('[data-confirm]').bsConfirm({
-    headerColorMap: {
-      primary: 'modal-header-primary',
-      success: 'modal-header-success',
-      warning: 'modal-header-warning',
-      info:    'modal-header-info',
-      danger:  'modal-header-danger',
-    },
-  });
-});</pre>
-          <p>&nbsp;</p>
-
-          <p><strong>Dialog Button text</strong></p>
-          <p>To change the dialog button text you can add the following attributes:</p>
-          <ul>
-            <li><code>data-confirm-btn="Confirm"</code></li>
-            <li><code>data-cancel-btn="Cancel"</code></li>
-          </ul>
-          <p>To change the button text in the plugin init:</p>
-          <pre>
-jQuery(function($) {
-  $('[data-confirm]').bsConfirm({
-    confirmBtn: 'Confirm',
-    cancelBtn: 'Cancel',
-  });
-});</pre>
-          <p>&nbsp;</p>
-
-
-        </div>
-        <div role="tabpanel" class="tab-pane" id="links">
+        <div role="tabpanel" class="tab-pane active" id="links">
           <p>&nbsp;</p>
           <p>
             <a href="bs3confirm.html" title="Primary Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-primary">Primary Confirm</a>
@@ -203,6 +141,7 @@ jQuery(function($) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+
 <script src="../js/jquery.bsConfirm.js"></script>
 
 <script>

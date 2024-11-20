@@ -1,15 +1,14 @@
 # bsConfirm
 
-__Project:__ bsConfirm    
-__Web:__ <https://github.com/tropotek/bsConfirm>  
-__Authors:__ Tropotek <http://www.tropotek.com/>
+__Author:__ Tropotek <http://www.tropotek.com/>
 
-A jQuery plugin to easily implement confirmation dialogs.
+A jQuery plugin to implement basic Bootstrap confirmation dialogs.
 
 ## Contents
 
 - [Installation](#installation)
-- [Introduction](#introduction)
+- [Options](#options)
+- [Usage](#usage)
 
 ## Installation
 
@@ -28,8 +27,6 @@ A jQuery plugin to easily implement confirmation dialogs.
 </script>
 ```
 
-## Introduction
-
 __Enable the bsConfirm plugin__
 
 The plugin will work with Bootstrap version 3, 4, and 5.
@@ -38,6 +35,21 @@ jQuery(function($) {
   $('[data-confirm]').bsConfirm();
 });
 ```
+
+## Options
+
+
+| Name           | Type   | Default   | Description                                                                                                        |
+|----------------|--------|-----------|--------------------------------------------------------------------------------------------------------------------|
+| template       | string | ''        | The dialog HTML template to use. If empty the plugin will select a template based on the Bootstrap version in use. |
+| dataConfirm    | string | 'confirm' | The name of the data attribute that contains the confirmation text. Default: `data-confirm=".."`                   |
+| confirmBtn     | string | 'Confirm' | Set the text of the dialog confirm button                                                                          |
+| cancelBtn      | string | 'Cancel'  | Set the text of the dialog cancel button                                                                           |
+| headerColorMap | object | object    | A map of dialog header class names to use for dialog colors                                                        |
+
+
+## Usage
+
 
 This will enable a confirmation dialog on any anchors and submit buttons with the `data-confirm="..."` attribute.
 
