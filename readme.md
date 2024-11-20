@@ -40,13 +40,13 @@ jQuery(function($) {
 
 ## Options
 
-| Name           | Type   | Default   | Description                                                                                                                                                         |
-|----------------|--------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| template       | string | ''        | The dialog HTML template to use. If empty the plugin will select a template based on the Bootstrap version in use.                                                  |
-| dataConfirm    | string | 'confirm' | The name of the data attribute that contains the confirmation text. This should match the plugin init selector without `data-` prepended. (default: `data-confirm`) |
-| confirmBtn     | string | 'Confirm' | Set the text of the dialog confirm button                                                                                                                           |
-| cancelBtn      | string | 'Cancel'  | Set the text of the dialog cancel button                                                                                                                            |
-| headerColorMap | object | object    | A map of dialog header class names to use for dialog colors                                                                                                         |
+| Name           | Type   | Default   | Description                                                                                                                                                                                                                                   |
+|----------------|--------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| template       | string | ''        | The dialog HTML template to use. If empty the plugin will select a template based on the Bootstrap version in use.                                                                                                                            |
+| dataConfirm    | string | 'confirm' | The name of the data attribute that contains the confirmation text. This should match the plugin init selector without `data-` prepended. To use `data-bs-confirm` this value should be set to its jQuery $.data() selector value `bsConfirm` |
+| confirmBtn     | string | 'Confirm' | Set the text of the dialog confirm button                                                                                                                                                                                                     |
+| cancelBtn      | string | 'Cancel'  | Set the text of the dialog cancel button                                                                                                                                                                                                      |
+| headerColorMap | object | object    | A map of dialog header class names to use for dialog colors                                                                                                                                                                                   |
 
 
 ## Usage
