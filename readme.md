@@ -45,6 +45,8 @@ jQuery(function($) {
 | confirmBtn     | string | 'Confirm' | Set the text of the dialog confirm button                                                                                                                                       |
 | cancelBtn      | string | 'Cancel'  | Set the text of the dialog cancel button                                                                                                                                        |
 | headerColorMap | object | object    | A map of dialog header class names to use for dialog colors                                                                                                                     |
+| onCancel       | event  | null      | Event                                                                                                                                                                           |
+| onConfirm      | event  | null      | Event                                                                                                                                                                           |
 
 
 ## Usage
