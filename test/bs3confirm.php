@@ -24,13 +24,13 @@
         <div role="tabpanel" class="tab-pane active" id="links">
           <p>&nbsp;</p>
           <p>
-            <a href="bs3confirm.html" title="Primary Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-primary">Primary Confirm</a>
-            <a href="bs3confirm.html" title="Success Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-success">Success Confirm</a>
-            <a href="bs3confirm.html" title="Warning Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-warning">Warning Confirm</a>
-            <a href="bs3confirm.html" title="Info Confirm"    data-confirm="Are you sure you want to submit this action?" class="btn btn-info">Info Confirm</a>
-            <a href="bs3confirm.html" title="Danger Confirm"  data-confirm="Are you sure you want to submit this action?" class="btn btn-danger">Danger Confirm</a>
-            <a href="bs3confirm.html" title="Default Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-default">Default Confirm</a>
-            <a href="bs3confirm.html" data-confirm="Are you sure you want to submit this action?">Basic Confirm Link</a>
+            <a href="bs3confirm.php" title="Primary Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-primary">Primary Confirm</a>
+            <a href="bs3confirm.php" title="Success Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-success">Success Confirm</a>
+            <a href="bs3confirm.php" title="Warning Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-warning">Warning Confirm</a>
+            <a href="bs3confirm.php" title="Info Confirm"    data-confirm="Are you sure you want to submit this action?" class="btn btn-info">Info Confirm</a>
+            <a href="bs3confirm.php" title="Danger Confirm"  data-confirm="Are you sure you want to submit this action?" class="btn btn-danger">Danger Confirm</a>
+            <a href="bs3confirm.php" title="Default Confirm" data-confirm="Are you sure you want to submit this action?" class="btn btn-default">Default Confirm</a>
+            <a href="bs3confirm.php" data-confirm="Are you sure you want to submit this action?">Basic Confirm Link</a>
           </p>
           <p>&nbsp;</p>
         </div>
