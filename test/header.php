@@ -117,11 +117,28 @@ if (basename($_SERVER['PHP_SELF']) == 'bs3confirm.php') {
 
 <?php endif ?>
 
+
+<script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+<script src="../js/jquery.bsConfirm.js"></script>
+
 <!--<script src="/vendor/htmx/htmx/htmx.min.js"></script>-->
-<script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.js"
-        integrity="sha384-oeUn82QNXPuVkGCkcrInrS1twIxKhkZiFfr2TdiuObZ3n3yIeMiqcRzkIcguaof1"
+<!--<script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.js"></script>-->
+<script src="https://unpkg.com/htmx.org@1.9.12/dist/htmx.js"></script>
+
+
+<?php if($is_bs5): ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+<?php else: ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<?php endif ?>
 </head>
 <body>
 
