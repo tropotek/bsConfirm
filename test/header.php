@@ -117,6 +117,7 @@ if (basename($_SERVER['PHP_SELF']) == 'bs3confirm.php') {
 
 <?php endif ?>
 
+<!--<script src="/vendor/htmx/htmx/htmx.min.js"></script>-->
 <script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.js"
         integrity="sha384-oeUn82QNXPuVkGCkcrInrS1twIxKhkZiFfr2TdiuObZ3n3yIeMiqcRzkIcguaof1"
         crossorigin="anonymous"></script>
